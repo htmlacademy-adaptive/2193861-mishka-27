@@ -8,6 +8,7 @@
 }
 
 .form-container__legend {
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -17,11 +18,43 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .form-container__legend {
+    padding-top: 25px;
+    padding-right: 103px;
+  }
+}
+
 .form-container__field-group {
   margin: 0;
   padding: 0;
   border: none;
   border-top: 1px solid #62d1ba;
+}
+
+@media (min-width: @tablet-width) {
+  .form-container__field-group {
+    border: none;
+  }
+}
+
+.form-container__field-group-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .form-container__field-group-wrapper {
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-container__field-group-wrapper-color {
+    background-color: #f1f1f1;
+  }
 }
 
 .form-container__field-list {
@@ -35,12 +68,38 @@
   margin: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .form-container__field-list {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
 .form-container__field-list-type {
   padding: 25px 0 43px 0;
 }
 
 .form-container__field-list-color {
   padding: 25px 0 33px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .form-container__field-list-color {
+    padding: 25px 0 33px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-container__field-list-color {
+    padding: 25px 0 33px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .form-container__field-list-name {
@@ -81,9 +140,40 @@
 }
 
 .form-container__contact {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 34px;
 }
 
+@media (min-width: @tablet-width) {
+  .form-container__contact {
+    display: flex;
+    flex-direction: row;
+    background-color: #f1f1f1;
+  }
+}
+
 .form-container__comment {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-container__comment {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.form-container__submit-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @desktop-width) {
+  .form-container__submit-wrapper {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
 }

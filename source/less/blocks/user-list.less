@@ -1,0 +1,41 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+}
+
+.user-list__search {
+  padding: 35px 32px;
+}
+
+.user-list__cart {
+  padding: 32px 0 32px 32px;
+}
+
+.user-list__cart-link {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-list__search-text {
+    display: none;
+  }
+}
