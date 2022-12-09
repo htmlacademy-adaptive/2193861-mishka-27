@@ -17,6 +17,12 @@
   padding: 16px 70px;
 }
 
+@media (min-width: @tablet-width) {
+  .button--order {
+    grid-area: button;
+  }
+}
+
 .button--review {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -28,6 +34,22 @@
   padding: 16px 66px;
 }
 
+@media (min-width: @tablet-width) {
+  .button--review {
+    grid-area: button;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    padding: 16px 26px;
+    width: 123px;
+    height: 20px;
+  }
+}
+
 .button--write-us {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -36,8 +58,26 @@
   line-height: 20px;
   color: #444444;
   text-transform: uppercase;
+  width: 185px;
+  height: 20px;
   padding: 16px 38px 16px 37px;
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .button--write-us {
+    width: 176px;
+    height: 20px;
+    padding: 16px 28px 16px 27px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--write-us {
+    width: 176px;
+    height: 20px;
+    padding: 16px 27px 16px 27px;
+  }
 }
 
 .button--submit {
