@@ -1,3 +1,19 @@
+.form-header {
+  margin-bottom: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-header {
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-header {
+    margin-bottom: 99px;
+  }
+}
+
 .form-header__title {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -9,4 +25,20 @@
   margin: 0;
   padding: 74px 22px;
   background-color: #f1f1f1;
+}
+
+@media (min-width: @tablet-width) {
+  .form-header__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 57px 175px 75px 175px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-header__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding: 57px 320px 96px 322px;
+  }
 }

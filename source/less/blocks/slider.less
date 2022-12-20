@@ -1,7 +1,6 @@
 .slider__toggle {
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 38px;
+  align-self: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -11,7 +10,25 @@
 }
 
 .slider__toggle-button {
+  display: block;
   border: 1px solid #ececec;
   background-color: #ffffff;
   padding: 13px 42px 13px 38px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__toggle-button {
+    padding: 19px;
+    border: none;
+    padding-top: 17px;
+  }
 }

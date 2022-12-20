@@ -2,6 +2,12 @@
   padding: 30px 30px 0 30px;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog {
+    padding: 67px 50px 0 50px;
+  }
+}
+
 .catalog__list {
   display: flex;
   flex-direction: column;
@@ -13,30 +19,56 @@
 @media (min-width: @desktop-width) {
   .catalog__list {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+}
+
+.catalog__cart-icon {
+  fill: #00000020;
 }
 
 .catalog__item {
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
-}
 
-@media (min-width: @tablet-width) {
-  .catalog__item {
-    flex-direction: row;
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+
+    .catalog__title {
+      opacity: 0.6;
+    }
+
+    .catalog__cart-icon {
+      fill: #63d1bb;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+    .catalog__title {
+      opacity: 0.3;
+    }
+
+    .catalog__cart-icon {
+      fill: #63d1bb30;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
-  .catalog__item:not(:last-child) {
-    margin-right: 50px;
+  .catalog__item {
+    display: grid;
+    grid-template-columns: 334px auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog__item {
+    display: flex;
     flex-direction: column;
+    width: 316px;
   }
 }
 
@@ -104,7 +136,48 @@
   padding-left: 28px;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog__title {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 27px;
+    padding-left: 34px;
+    padding-right: 39px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__title {
+    padding-bottom: 6px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__title-rabbit {
+    padding-top: 27px;
+    padding-right: 26px;
+    padding-left: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__title-basket {
+    padding-top: 27px;
+    padding-right: 48px;
+    padding-left: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__title-toys {
+    padding-top: 27px;
+    padding-right: 58px;
+    padding-left: 28px;
+  }
+}
+
 .catalog__description-text {
+  position: relative;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -116,11 +189,99 @@
   margin: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog__description-text {
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__description-text {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__description-text-rabbit {
+    padding-bottom: 197px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__description-text-rabbit {
+    padding-right: 111px;
+    padding-bottom: 60px;
+    padding-left: 28px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__description-text-basket {
+    padding-bottom: 194px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__description-text-basket {
+    padding-right: 53px;
+    padding-bottom: 60px;
+    padding-left: 27px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__description-text-toys {
+    padding-bottom: 173px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__description-text-toys {
+    padding-right: 50px;
+    padding-bottom: 36px;
+    padding-left: 27px;
+  }
+}
+
+.catalog__description-text::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 204px;
+  background-color: #ececec;
+  right: 0;
+  left: 24px;
+  top: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__description-text::after {
+    width: 268px;
+    top: 210px;
+    left: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__description-text::after {
+    top: 60px;
+    left: 25px;
+  }
+}
+
 .catalog__price-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 32px 27px 28px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__price-container {
+    padding: 0 32px 25px 34px;
+  }
 }
 
 .catalog__price {
@@ -130,4 +291,11 @@
   font-size: 15px;
   line-height: 24px;
   color: #000000;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__price {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
