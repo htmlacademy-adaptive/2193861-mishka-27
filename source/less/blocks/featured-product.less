@@ -3,19 +3,20 @@
   color: #000000;
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 73px;
+  margin-bottom: 46px;
 }
 
-.featured-product__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media (min-width: @tablet-width) {
+  .featured-product {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .featured-product__card {
     display: grid;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
       "text image"
       "description image"
@@ -53,6 +54,9 @@
     font-size: 43px;
     line-height: 50px;
     color: #000000;
+    padding-top: 38px;
+    padding-bottom: 39px;
+    padding-left: 50px;
   }
 }
 
@@ -64,6 +68,9 @@
     font-size: 53px;
     line-height: 57px;
     color: #000000;
+    padding-top: 61px;
+    padding-bottom: 35px;
+    padding-left: 43px;
   }
 }
 
@@ -87,6 +94,9 @@
     text-align: center;
     width: 100px;
     height: 34px;
+    padding-top: 46px;
+    padding-bottom: 60px;
+    padding-right: 50px;
   }
 }
 
@@ -101,6 +111,10 @@
     text-align: center;
     width: 100px;
     height: 34px;
+    padding-top: 71px;
+    padding-right: 43px;
+    padding-bottom: 50px;
+    padding-left: 82px;
   }
 }
 
@@ -112,7 +126,6 @@
   font-size: 15px;
   line-height: 24px;
   color: #444444;
-  max-width: 260px;
   margin: 0;
   padding-top: 18px;
   padding-bottom: 28px;
@@ -121,13 +134,30 @@
 @media (min-width: @tablet-width) {
   .featured-product__description-text {
     grid-area: text;
+    padding-top: 37px;
+    padding-left: 50px;
+    padding-bottom: 48px;
+    padding-right: 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .featured-product__description-text {
+    position: absolute;
+    top: 1050px;
+    right: 575px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    height: 90px;
+    padding-top: 0;
+    padding-right: 58px;
+    padding-left: 225px;
+    padding-bottom: 60px;
   }
 }
 
 .featured-product__description-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   list-style-type: none;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -142,7 +172,38 @@
 @media (min-width: @tablet-width) {
   .featured-product__description-list {
     grid-area: description;
+    padding-bottom: 57px;
+    padding-left: 50px;
+    padding-right: 42px;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .featured-product__description-list {
+    height: 114px;
+    padding-top: 0;
+    padding-right: 58px;
+    padding-bottom: 109px;
+    padding-left: 225px;
+  }
+}
+
+.featured-product__description-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ececec;
+}
+
+.featured-product__description-term {
+  text-align: left;
+}
+
+.featured-product__description-detail {
+  margin: 0;
+  text-align: right;
 }
 
 .featured-product__price {
@@ -160,11 +221,23 @@
 @media (min-width: @tablet-width) {
   .featured-product__price {
     grid-area: price;
+    padding-bottom: 37px;
+    padding-left: 57px;
+    padding-right: 103px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .featured-product__price {
+    padding-top: 0;
+    padding-right: 117px;
+    padding-bottom: 33px;
+    padding-left: 225px;
   }
 }
 
 .featured-product__image-mobile {
-  display: block;
+  text-align: center;
   padding-top: 28px;
   padding-bottom: 25px;
 }
@@ -185,6 +258,8 @@
   .featured-product__image-tablet {
     display: block;
     grid-area: image;
+    padding-top: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -210,6 +285,7 @@
   .featured-product__image-desktop {
     display: block;
     grid-area: image;
+    padding-right: 50px;
   }
 }
 
@@ -234,8 +310,24 @@
 
 @media (min-width: @desktop-width) {
   .featured-product__title-wrapper {
+    position: absolute;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .featured-product__button {
+    grid-area: button;
+    margin-left: 50px;
+    margin-right: 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .featured-product__button {
+    margin-right: 58px;
+    margin-left: 311px;
   }
 }

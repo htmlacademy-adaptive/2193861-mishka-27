@@ -3,7 +3,6 @@
   flex-direction: column;
   background-color: #ffffff;
   color: #000000;
-  position: relative;
 }
 
 @media (min-width: @tablet-width) {
@@ -28,5 +27,63 @@
 @media (min-width: @tablet-width) {
   .header__title {
     grid-area: title;
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 101px;
+    padding-right: 183px;
+    padding-bottom: 75px;
+    padding-left: 183px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 102px;
+    padding-right: 332px;
+    padding-bottom: 96px;
+    padding-left: 332px;
+  }
+}
+
+.header__logo-icon {
+  fill: #000000;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header__logo-icon-tablet {
+    fill: #000000;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__logo-icon-desktop {
+    fill: #000000;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

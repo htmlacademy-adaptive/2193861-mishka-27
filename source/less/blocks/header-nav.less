@@ -1,5 +1,6 @@
 .header-nav {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,9 +15,10 @@
 @media (min-width: @desktop-width) {
   .header-nav {
     display: grid;
+    grid-template-columns: auto 149px auto;
     grid-template-rows: 89px 70px;
     grid-template-areas:  "site-menu-main  logo  user-menu"
-      "site-menu-additional  .  delivery";
+      "site-menu-additional  divider  delivery";
   }
 }
 
@@ -24,19 +26,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 79px;
-  padding: 0 30px;
+  min-height: 79px;
   background-color: #ffffff;
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 @media (min-width: @tablet-width) {
   .header-nav__top-menu {
-    display: flex;
+    display: block;
     grid-area: logo;
     height: 89px;
     background-color: #ffffff;
-    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+    border-bottom: 1px solid #ececec;
   }
 }
 
@@ -46,27 +47,55 @@
   }
 }
 
-.header-nav__toggle {
+.header-nav__toggle-open {
   border: none;
   background-color: transparent;
   min-width: 20px;
   min-height: 14px;
+  padding-top: 32px;
+  padding-right: 31px;
+  padding-bottom: 33px;
+}
+
+.header-nav__toggle-open--closed {
+  display: block;
+}
+
+.header-nav__toggle-open--opened {
+  display: none;
+}
+
+.header-nav__toggle-close {
+  display: none;
+}
+
+.header-nav__toggle-close--opened {
+  display: block;
+  border: none;
+  background-color: transparent;
+  min-width: 21px;
+  min-height: 20px;
+  padding-top: 29px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
 }
 
 @media (min-width: @tablet-width) {
-  .header-nav__toggle {
+  .header-nav__toggle-open {
     display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header-nav__toggle {
+  .header-nav__toggle-open {
     display: none;
   }
 }
 
 .header-nav__logo {
   display: block;
+  padding: 22px 67px 22px 116px;
   min-width: 86px;
   min-height: 35px;
   margin: 0;
@@ -91,6 +120,10 @@
 @media (min-width: @tablet-width) {
   .header-nav__logo-tablet {
     display: block;
+    padding-top: 21px;
+    padding-bottom: 22px;
+    padding-left: 50px;
+    padding-right: 209px;
   }
 }
 
@@ -113,11 +146,28 @@
 @media (min-width: @desktop-width) {
   .header-nav__logo-desktop {
     display: block;
+    padding-top: 9px;
+    padding-bottom: 7px;
   }
 }
 
-.header-nav__list-main {
+.header-nav__list-main--closed {
   display: none;
+}
+
+.header-nav__list-main--opened {
+  position: absolute;
+  display: block;
+  top: 84px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .header-nav__list-main--closed .header-nav__list-main--opened {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -151,32 +201,40 @@
   }
 }
 
-.header-nav__user-menu {
+.header-nav__user-menu--closed {
   display: none;
+}
+
+.header-nav__user-menu--opened {
+  position: absolute;
+  display: block;
+  top: 244px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .header-nav__user-menu--opened .header-nav__user-menu--closed {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .header-nav__user-menu {
     display: flex;
+    justify-content: flex-end;
     grid-area: user-menu;
     height: 89px;
     background-color: #ffffff;
-    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+    border-bottom: 1px solid #ececec;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .header-nav__user-menu {
-    display: flex;
     grid-area: user-menu;
   }
-}
-
-.header-nav__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .header-nav__delivery {
@@ -194,6 +252,14 @@
     line-height: 24px;
     color: #444444;
     text-align: right;
+    padding-top: 22px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__delivery-additional-page {
+    background-color: #f1f1f1;
   }
 }
 
@@ -208,5 +274,27 @@
     line-height: 24px;
     color: #444444;
     text-align: right;
+    padding-top: 20px;
+    padding-right: 51px;
+  }
+}
+
+.header-nav__decoration {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__decoration {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-nav__decoration {
+    display: block;
+    grid-area: divider;
+    background-color: #f1f1f1;
+    width: 149px;
+    height: 70px;
   }
 }

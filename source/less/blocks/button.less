@@ -3,11 +3,21 @@
   border: 2px solid #444444;
   text-decoration: none;
   background-color: transparent;
-  min-width: 120px;
   text-align: center;
+
+  &:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #444444;
+    color: #ffffff70;
+  }
 }
 
 .button--order {
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -19,7 +29,14 @@
 
 @media (min-width: @tablet-width) {
   .button--order {
-    grid-area: button;
+    padding: 16px 86px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--order {
+    width: 120px;
+    height: 20px;
   }
 }
 
@@ -58,8 +75,6 @@
   line-height: 20px;
   color: #444444;
   text-transform: uppercase;
-  width: 185px;
-  height: 20px;
   padding: 16px 38px 16px 37px;
   cursor: pointer;
 }
@@ -74,8 +89,8 @@
 
 @media (min-width: @desktop-width) {
   .button--write-us {
-    width: 176px;
-    height: 20px;
+    font-size: 17px;
+    line-height: 20px;
     padding: 16px 27px 16px 27px;
   }
 }
