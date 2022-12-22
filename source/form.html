@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мишка: форма</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__form">
   <header class="form-header header">
@@ -57,7 +61,7 @@
         </button>
       </div>
       <div class="site-list">
-        <div class="header-nav__list-main header-nav__list-main--closed header-nav__list-main--nojs site-list__main-wrapper">
+        <div class="header-nav__list-main header-nav__list-main-additional-pages header-nav__list-main--closed header-nav__list-main--nojs site-list__main-wrapper">
           <ul class="header-nav__list site-list__main">
             <li class="site-list__item site-list__item-catalog">
               <a class="site-list__link site-list__link-catalog" href="catalog.html">Каталог товаров</a>
@@ -67,7 +71,7 @@
             </li>
           </ul>
           </div>
-          <div class="header-nav__list-additional site-list__additional-wrapper">
+          <div class="header-nav__list-additional header-nav__list-additional-other-pages site-list__additional-wrapper">
             <ul class="header-nav__list site-list__additional">
               <li class="site-list__item site-list__item-new">
                 <a class="site-list__link site-list__link-new" href="catalog.html">Новые поступления</a>
@@ -78,7 +82,7 @@
             </ul>
           </div>
         </div>
-        <small class="header-nav__delivery">Бесплатная доставка по России</small>
+        <small class="header-nav__delivery header-nav__delivery-additional-page">Бесплатная доставка по России</small>
         <div class="header-nav__user-menu header-nav__user-menu--closed header-nav__user-menu--nojs">
           <ul class="header-nav__list user-list">
             <li class="user-list__search">
@@ -99,6 +103,7 @@
             </li>
           </ul>
         </div>
+        <div class="header-nav__decoration header-nav__decoration-additional-pages"></div>
     </nav>
     <h1 class="header__title form-header__title">Вязание на заказ</h1>
   </header>

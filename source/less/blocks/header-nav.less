@@ -27,8 +27,8 @@
   justify-content: space-between;
   align-items: center;
   min-height: 79px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
+  background-color: @header-nav-top-menu-background-color;
+  border-bottom: 1px solid @header-nav-menu-border-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,8 +36,8 @@
     display: block;
     grid-area: logo;
     height: 89px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ececec;
+    background-color: @header-nav-top-menu-background-color;
+    border-bottom: 1px solid @header-nav-menu-border-color;
   }
 }
 
@@ -49,7 +49,7 @@
 
 .header-nav__toggle-open {
   border: none;
-  background-color: transparent;
+  background-color: @header-nav-toggle-button-background-color;
   min-width: 20px;
   min-height: 14px;
   padding-top: 32px;
@@ -72,7 +72,7 @@
 .header-nav__toggle-close--opened {
   display: block;
   border: none;
-  background-color: transparent;
+  background-color: @header-nav-toggle-button-background-color;
   min-width: 21px;
   min-height: 20px;
   padding-top: 29px;
@@ -173,6 +173,13 @@
 @media (min-width: @tablet-width) {
   .header-nav__list-main {
     grid-area: site-menu-main;
+    background-color: @header-nav-list-menu-index-background-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__list-main-additional-pages {
+    background-color: @header-nav-list-menu-other-pages-background-color;
   }
 }
 
@@ -180,8 +187,8 @@
   .header-nav__list-main {
     grid-area: site-menu-main;
     height: 89px;
-    background-color: #ffffff;
-    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+    background-color: @header-nav-top-menu-background-color;
+    border-bottom: 1px solid @header-nav-menu-border-color;
   }
 }
 
@@ -198,6 +205,13 @@
 @media (min-width: @desktop-width) {
   .header-nav__list-additional {
     grid-area: site-menu-additional;
+    background-color: @header-nav-list-menu-index-background-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-nav__list-additional-other-pages {
+    background-color: @header-nav-list-menu-other-pages-background-color;
   }
 }
 
@@ -226,8 +240,8 @@
     justify-content: flex-end;
     grid-area: user-menu;
     height: 89px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ececec;
+    background-color: @header-nav-top-menu-background-color;
+    border-bottom: 1px solid @header-nav-menu-border-color;
   }
 }
 
@@ -244,13 +258,14 @@
 @media (min-width: @tablet-width) {
   .header-nav__delivery {
     display: block;
+    background-color: @header-nav-index-delivery-background-color;
     grid-area: delivery;
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    color: #444444;
+    color: @small-text-color;
     text-align: right;
     padding-top: 22px;
     padding-right: 50px;
@@ -259,7 +274,7 @@
 
 @media (min-width: @tablet-width) {
   .header-nav__delivery-additional-page {
-    background-color: #f1f1f1;
+    background-color: @header-nav-other-delivery-background-color;
   }
 }
 
@@ -272,7 +287,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    color: #444444;
+    color: @small-text-color;
     text-align: right;
     padding-top: 20px;
     padding-right: 51px;
@@ -293,8 +308,20 @@
   .header-nav__decoration {
     display: block;
     grid-area: divider;
-    background-color: #f1f1f1;
+    background-color: @header-nav-index-delivery-background-color;
     width: 149px;
     height: 70px;
+    border-top: 1px solid @item-wrapper-border-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-nav__decoration-additional-pages {
+    display: block;
+    grid-area: divider;
+    background-color: @header-nav-other-delivery-background-color;
+    width: 149px;
+    height: 70px;
+    border-top: 1px solid @item-wrapper-border-color;
   }
 }

@@ -4,7 +4,7 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  color: #444444;
+  color: @small-text-color;
   margin: 0;
   padding-top: 0;
   padding-right: 30px;
@@ -30,7 +30,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  color: #63d1bb;
+  color: @form-legend-text-color;
   text-transform: uppercase;
   padding-top: 0;
   padding-left: 0;
@@ -69,7 +69,7 @@
   position: absolute;
   height: 1px;
   width: 200px;
-  background-color: #62d1ba;
+  background-color: @form-legend-decoration-color;
   top: 8px;
   left: 60px;
 }
@@ -110,21 +110,19 @@
 
 @media (min-width: @tablet-width) {
   .form-container__field-group-wrapper-color {
-    background-color: #f1f1f1;
+    background-color: @form-field-group-color-background;
   }
 }
 
 .form-container__field-list {
+  .reset-list;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
-  color: #000000;
-  list-style-type: none;
+  color: @main-text-color;
   min-width: 260px;
-  padding: 0;
-  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -181,11 +179,11 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  color: #00000010;
+  color: @form-input-text-color;
   padding-top: 17px;
   padding-bottom: 17px;
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @form-input-border;
 }
 
 @media (min-width: @tablet-width) {
@@ -203,14 +201,14 @@
 
   &:hover {
     .form-container__input {
-      border-bottom: 2px solid #62d1ba;
+      border-bottom: 2px solid @form-hover-input-border;
     }
   }
 
   &:active {
     .form-container__input {
-      border-bottom: 2px solid #62d1ba;
-      color: #000000;
+      border-bottom: 2px solid @form-active-input-border;
+      color: @form-active-input-text-color;
     }
   }
 }
@@ -254,7 +252,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #444444;
+  color: @small-text-color;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 30px;
@@ -282,24 +280,23 @@
 
   &:hover {
     .form-container__type-item-mark {
-      border: 2px solid #62d1ba;
+      border: 2px solid @form-hover-mark-border-color;
     }
   }
 
   &:active {
     .form-container__type-item-mark {
-      border: 2px solid #00000030;
+      border: 2px solid @form-active-mark-border-color;
     }
   }
 }
 
-
 .form-container__type-item-mark {
   display: block;
   position: relative;
-  background: #ffffff;
+  background: @form-mark-fill-color-mobile;
   border-radius: 50%;
-  border: 2px solid #444444;
+  border: 2px solid @form-mark-border-color;
   min-width: 40px;
   min-height: 40px;
 }
@@ -308,7 +305,7 @@
   display: block;
   font-size: 17px;
   line-height: 18px;
-  color: #000000;
+  color: @title-text-color;
   align-self: center;
   padding-left: 15px;
 }
@@ -318,7 +315,7 @@
   content: "";
   width: 18px;
   height: 18px;
-  background-color: #62d1ba;
+  background-color: @form-mark-checked-color;
   border-radius: 50%;
   top: 11px;
   left: 11px;
@@ -355,13 +352,13 @@
 
   &:hover {
     .form-container__color-item-mark {
-      border: 2px solid #62d1ba;
+      border: 2px solid @form-hover-mark-border-color;
     }
   }
 
   &:active {
     .form-container__color-item-mark {
-      border: 2px solid #44444430;
+      border: 2px solid @form-active-mark-border-color;
     }
   }
 }
@@ -369,15 +366,15 @@
 .form-container__color-item-mark {
   position: relative;
   display: block;
-  background-color: #ffffff;
-  border: 2px solid #444444;
+  background-color: @form-mark-fill-color-mobile;
+  border: 2px solid @form-mark-border-color;
   min-width: 38px;
   min-height: 38px;
 }
 
 @media (min-width: @tablet-width) {
   .form-container__color-item-mark {
-    background-color: #f1f1f1;
+    background-color: @form-mark-fill-color-tablet-desktop;
   }
 }
 
@@ -385,7 +382,7 @@
   display: block;
   font-size: 17px;
   line-height: 18px;
-  color: #000000;
+  color: @title-text-color;
   align-self: center;
   padding-left: 33px;
 }
@@ -404,7 +401,7 @@
   position: absolute;
   top: 30px;
   left: 258px;
-  fill: #00000020;
+  fill: @icon-fill-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -425,7 +422,7 @@
   position: absolute;
   top: 34px;
   left: 256px;
-  fill: #00000020;
+  fill: @icon-fill-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -452,30 +449,30 @@
 
   &:hover {
     .form-container__input {
-      border-bottom: 2px solid #62d1ba;
+      border-bottom: 2px solid @form-hover-input-border;
     }
 
     .form-container__phone-icon {
-      fill: #62d1ba;
+      fill: @form-icon-hover-fill-color;
     }
 
     .form-container__email-icon {
-      fill: #62d1ba;
+      fill: @form-icon-hover-fill-color;
     }
   }
 
   &:active {
     .form-container__input {
-      border-bottom: 2px solid #62d1ba;
-      color: #000000;
+      border-bottom: 2px solid @form-active-input-border;
+      color: @form-active-input-text-color;
     }
 
     .form-container__phone-icon {
-      fill: #62d1ba;
+      fill: @form-icon-active-fill-color;
     }
 
     .form-container__email-icon {
-      fill: #62d1ba;
+      fill: @form-icon-active-fill-color;
     }
   }
 }
@@ -484,7 +481,7 @@
   .form-container__contact {
     display: grid;
     grid-template-columns: 167px auto;
-    background-color: #f1f1f1;
+    background-color: @form-field-contact-background;
     padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
@@ -538,7 +535,7 @@
 
 @media (min-width: @tablet-width) {
   .form-container__input-contact-phone {
-    background-color: #f1f1f1;
+    background-color: @form-field-contact-background;
     padding-top: 14px;
     padding-right: 0;
     padding-bottom: 20px;
@@ -589,7 +586,7 @@
 
 @media (min-width: @tablet-width) {
   .form-container__input-contact-email {
-    background-color: #f1f1f1;
+    background-color: @form-field-contact-background;
     padding-top: 15px;
     padding-right: 0;
     padding-left: 18px;
@@ -606,14 +603,14 @@
 
   &:hover {
     .form-container__input-comment {
-      border: 2px solid #62d1ba;
+      border: 2px solid @form-hover-input-border;
     }
   }
 
   &:active {
     .form-container__input-comment {
-      border: 2px solid #62d1ba;
-      color: #000000;
+      border: 2px solid @form-active-input-border;
+      color: @form-active-input-text-color;
     }
   }
 }
@@ -665,8 +662,8 @@
 .form-container__input-comment {
   font-size: 17px;
   line-height: 18px;
-  color: #00000030;
-  border: 2px solid #444444;
+  color: @form-input-text-color;
+  border: 2px solid @form-input-comment-border-color;
   padding: 17px;
 }
 

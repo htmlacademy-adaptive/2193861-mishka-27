@@ -1,8 +1,8 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: @header-background-color;
+  color: @main-text-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -17,11 +17,11 @@
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  color: #000000;
+  color: @title-text-color;
   text-align: center;
   margin: 0;
   padding: 74px 22px;
-  background-color: #f1f1f1;
+  background-color: @header-title-background-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,21 +48,20 @@
 }
 
 .header__logo-icon {
-  fill: #000000;
+  fill: @header-icon-fill-color;
 
   &:hover {
-    fill: #46c1ae;
+    fill: @header-hover-icon-fill-color-mobile;
   }
 
   &:active {
-    fill: #46c1ae;
-    opacity: 0.3;
+    fill: @header-active-icon-fill-color-mobile;
   }
 }
 
 @media (min-width: @tablet-width) {
   .header__logo-icon-tablet {
-    fill: #000000;
+    fill: @header-icon-fill-color;
 
     &:hover {
       opacity: 0.6;
@@ -76,7 +75,7 @@
 
 @media (min-width: @desktop-width) {
   .header__logo-icon-desktop {
-    fill: #000000;
+    fill: @header-icon-fill-color;
 
     &:hover {
       opacity: 0.6;

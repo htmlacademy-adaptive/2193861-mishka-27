@@ -1,5 +1,5 @@
 .copyright__icon {
-  fill: #63d1bb;
+  fill: @copyright-icon-fill-color;
   padding-top: 22px;
   padding-right: 69px;
   padding-bottom: 23px;
@@ -13,20 +13,20 @@
 }
 
 .copyright {
-  background-color: #f1f1f1;
+  background-color: @footer-background-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   &:hover {
     .copyright__icon {
-      fill: #46c1ae;
+      fill: @copyright-icon-fill-color;
     }
   }
 
   &:active {
     .copyright__icon {
-      fill: #46c1ae30;
+      fill: @copyright-icon-active-fill-color;
     }
   }
 }
@@ -45,7 +45,7 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
-  color: #000000;
+  color: @title-text-color;
   padding-top: 29px;
   padding-right: 27px;
   padding-bottom: 32px;
