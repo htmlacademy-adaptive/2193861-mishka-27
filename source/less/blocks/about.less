@@ -8,7 +8,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  color: #000000;
+  color: @title-text-color;
   margin: 0;
   padding: 31px 30px 28px 30px;
 }
@@ -35,9 +35,7 @@
 .about__list {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .reset-list;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,7 +55,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
-  color: #000000;
+  color: @main-text-color;
   display: block;
   margin: 0;
   min-height: 40px;
@@ -123,6 +121,7 @@
 
 @media (min-width: @tablet-width) {
   .about__icon-eco {
+    padding-top: 41px;
     padding-left: 58px;
   }
 }

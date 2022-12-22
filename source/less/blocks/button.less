@@ -1,18 +1,18 @@
 .button {
   display: inline-block;
-  border: 2px solid #444444;
+  border: 2px solid @button-border-color;
   text-decoration: none;
   background-color: transparent;
   text-align: center;
 
   &:hover {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: @button-hover-background-color;
+    color: @button-hover-text-color;
   }
 
   &:active {
-    background-color: #444444;
-    color: #ffffff70;
+    background-color: @button-active-background-color;
+    color: @button-active-text-color;
   }
 }
 
@@ -23,7 +23,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  color: #444444;
+  color: @button-text-color;
   padding: 16px 70px;
 }
 
@@ -46,7 +46,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  color: #444444;
+  color: @button-text-color;
   text-transform: uppercase;
   padding: 16px 66px;
 }
@@ -59,7 +59,6 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
-    color: #444444;
     text-transform: uppercase;
     padding: 16px 26px;
     width: 123px;
@@ -73,7 +72,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  color: #444444;
+  color: @button-text-color;
   text-transform: uppercase;
   padding: 16px 38px 16px 37px;
   cursor: pointer;
@@ -101,7 +100,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  color: #444444;
+  color: @button-text-color;
   text-align: center;
   text-transform: uppercase;
   padding: 18px 37px;
@@ -115,6 +114,6 @@
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
-  color: #444444;
+  color: @button-text-color;
   padding: 18px 11px;
 }

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header header">
@@ -98,6 +102,7 @@
                   </li>
                 </ul>
               </div>
+              <div class="header-nav__decoration"></div>
           </nav>
         <div class="main-header__wrapper">
           <h1 class="main-header__title">Милые штуки ручной работы для дома</h1>
@@ -144,9 +149,13 @@
               <dd class="featured-product__description-detail">15 см</dd>
             </div>
           </dl>
-          <img class="featured-product__image-mobile" src="./img/featured-product-triple-set-mobile.jpeg" alt="Взязаные корзинки." width="260" height="315">
-          <img class="featured-product__image-tablet" src="./img/featured-product-triple-set-tablet.jpeg" alt="Взязаные корзинки." width="334" height="404">
-          <img class="featured-product__image-desktop" src="./img/featured-product-triple-set-desktop.jpeg" alt="Взязаные корзинки." width="525" height="636">
+          <p class="featured-product__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/featured-product-triple-set-desktop@1x.jpg 1x, ./img/featured-product-triple-set-desktop@1x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/featured-product-triple-set-tablet@1x.jpg 1x, ./img/featured-product-triple-set-tablet@2x.jpg 2x">
+              <img class="featured-product__image" src="./img/featured-product-triple-set-mobile.jpg" srcset="./img/featured-product-triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Взязаные корзинки.">
+            </picture>
+          </p>
           <p class="featured-product__price">Цена: 990 руб.</p>
           <a class="featured-product__button button--order button" href="form.html">ЗАКАЗАТЬ</a>
         </div>
@@ -229,9 +238,7 @@
             </div>
           </dl>
         </div>
-        <img class="contacts__map-mobile" src="./img/map-mobile@1x.jpeg" alt="Как нас найти." width="320" height="454">
-        <img class="contacts__map-tablet" src="./img/map-tablet@1x.jpeg" alt="Как нас найти." width="768" height="457">
-        <img class="contacts__map-desktop" src="./img/map-desktop@1x.jpeg" alt="Как нас найти." width="527" height="457">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2str!4v1671651291439!5m2!1sru!2str" width="766" height="454" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
         <a class="button--write-us button contacts__button" href="#">Напишите нам</a>
       </section>
       <div class="footer">

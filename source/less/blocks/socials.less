@@ -1,14 +1,13 @@
 .socials {
-  background-color: #f1f1f1;
+  background-color: @footer-background-color;
 }
 
 .socials__list {
+  .reset-list;
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin: 0;
   padding: 25px 89px 28px 89px;
-  list-style: none;
   width: 142px;
 }
 
@@ -22,7 +21,7 @@
   position: absolute;
   content: "";
   height: 1px;
-  background-color: #e5e5e5;
+  background-color: @socials-border-color;
   width: 100%;
   top: 77px;
   right: 0;
@@ -36,17 +35,17 @@
 }
 
 .socials__item {
-  fill: #000000;
+  fill: @socials-icon-fill-color;
 
   &:hover {
     .socials-icon {
-      fill: #46c1ae;
+      fill: @socials-hover-icon-fill-color;
     }
   }
 
   &:active {
     .socials-icon {
-      fill: #46c1ae30;
+      fill: @socials-active-icon-fill-color;
     }
   }
 }

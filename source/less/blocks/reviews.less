@@ -24,9 +24,14 @@
       "text text"
       "author slider";
     grid-template-columns: 1fr 1fr;
-    background-image: url("../img/reviews-background.jpeg");
+    background-image: url("../img/reviews-background-tablet@1x.jpg");
     background-repeat: no-repeat;
     margin-bottom: 170px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews-background-tablet@2x.jpg");
+      background-size: contain;
+    }
   }
 }
 
@@ -38,11 +43,16 @@
       "text text"
       "author slider";
     grid-template-columns: 1fr 1fr;
-    background-image: url("../img/reviews-background.jpeg");
+    background-image: url("../img/reviews-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: left 50px top;
     padding-right: 50px;
     padding-left: 50px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/reviews-background-desktop@2x.jpg");
+      background-size: contain;
+    }
   }
 }
 
@@ -52,7 +62,7 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
-  color: #000000;
+  color: @title-text-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -63,7 +73,7 @@
     font-weight: 700;
     font-size: 43px;
     line-height: 50px;
-    color: #000000;
+    color: @title-text-color;
     margin: 0;
     padding-top: 82px;
     padding-right: 284px;
@@ -90,7 +100,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: @small-text-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -120,7 +130,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  color: #000000;
+  color: @main-text-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -135,7 +145,7 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 30px;
-  color: #444444;
+  color: @small-text-color;
 }
 
 @media (min-width: @tablet-width) {

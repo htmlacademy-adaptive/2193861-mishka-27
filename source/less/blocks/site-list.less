@@ -1,7 +1,5 @@
 .site-list__main {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .reset-list;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,9 +23,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .reset-list;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,13 +44,13 @@
 
 @media (min-width: @tablet-width) {
   .site-list__main-wrapper-additional-page {
-    background-color: #f1f1f1;
+    background-color: @menu-item-background-color-main-page;
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list__main-wrapper-additional-page {
-    background-color: #ffffff;
+    background-color: @menu-item-background-color-additional-page;
   }
 }
 
@@ -76,7 +72,7 @@
 
 @media (min-width: @desktop-width) {
   .site-list__additional-wrapper-additional-page {
-    background-color: #f1f1f1;
+    background-color: @menu-item-background-color-additional-page;
   }
 }
 
@@ -87,19 +83,19 @@
 
 .site-list__link {
   display: block;
-  background-color: #ffffff;
+  background-color: @menu-item-background-color;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  color: #000000;
+  color: @main-text-color;
   text-decoration: none;
   padding-top: 28px;
   padding-bottom: 27px;
   padding-left: 26px;
   padding-right: 10px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @item-wrapper-border-color;
 
   &:hover {
     opacity: 0.6;
@@ -130,7 +126,7 @@
   .site-list__link {
     font-size: 17px;
     line-height: 24px;
-    border-right: 1px solid #ececec;
+    border-right: 1px solid @item-wrapper-border-color;
   }
 }
 

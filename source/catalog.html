@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мишка: Каталог</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__catalog">
   <header class="catalog-header header">
@@ -57,7 +61,7 @@
         </button>
       </div>
       <div class="site-list">
-        <div class="header-nav__list-main header-nav__list-main--closed header-nav__list-main--nojs site-list__main-wrapper">
+        <div class="header-nav__list-main header-nav__list-main-additional-pages header-nav__list-main--closed header-nav__list-main--nojs site-list__main-wrapper">
           <ul class="header-nav__list site-list__main">
             <li class="site-list__item site-list__item-catalog">
               <a class="site-list__link site-list__link-catalog" href="catalog.html">Каталог товаров</a>
@@ -67,7 +71,7 @@
             </li>
           </ul>
           </div>
-          <div class="header-nav__list-additional site-list__additional-wrapper">
+          <div class="header-nav__list-additional header-nav__list-additional-other-pages site-list__additional-wrapper">
             <ul class="header-nav__list site-list__additional">
               <li class="site-list__item site-list__item-new">
                 <a class="site-list__link site-list__link-new" href="catalog.html">Новые поступления</a>
@@ -78,7 +82,7 @@
             </ul>
           </div>
         </div>
-        <small class="header-nav__delivery">Бесплатная доставка по России</small>
+        <small class="header-nav__delivery header-nav__delivery-additional-page">Бесплатная доставка по России</small>
         <div class="header-nav__user-menu header-nav__user-menu--closed header-nav__user-menu--nojs">
           <ul class="header-nav__list user-list">
             <li class="user-list__search">
@@ -99,6 +103,7 @@
             </li>
           </ul>
         </div>
+        <div class="header-nav__decoration header-nav__decoration-additional-pages"></div>
     </nav>
     <h1 class="header__title">Каталог товаров</h1>
   </header>
@@ -107,9 +112,13 @@
       <h2 class="visually-hidden">Каталог</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <img class="catalog__image-mobile" src="./img/photo-rabbit-mobile.jpeg" alt="Изображение вязанного зайчика." width="260" height="195">
-          <img class="catalog__image-tablet" src="./img/photo-rabbit-tablet.jpeg" alt="Изображение вязанного зайчика." width="334" height="334">
-          <img class="catalog__image-desktop" src="./img/photo-rabbit-desktop.jpeg" alt="Изображение вязанного зайчика." width="316" height="462">
+          <p class="catalog__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-rabbit-desktop@1x.jpg 1x, ./img/photo-rabbit-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-rabbit-tablet@1x.jpg 1x, ./img/photo-rabbit-tablet@2x.jpg 2x">
+              <img class="catalog__image" src="./img/photo-rabbit-mobile@1x.jpg" srcset="./img/photo-rabbit-mobile@2x.jpg 2x" alt="Изображение вязанного зайчика." width="260" height="195">
+            </picture>
+          </p>
           <div class="catalog__description">
             <h3 class="catalog__title catalog__title-rabbit">Зайчик-попрыгайчик</h3>
             <p class="catalog__description-text catalog__description-text-rabbit">Рост 30 см, вес 200 г</p>
@@ -120,12 +129,15 @@
               </svg>
             </div>
           </div>
-
         </li>
         <li class="catalog__item">
-          <img class="catalog__image-mobile" src="./img/photo-laundry-basket-mobile.jpeg" alt="Изображение вязанной корзинки для белья." width="260" height="195">
-          <img class="catalog__image-tablet" src="./img/photo-laundry-basket-tablet.jpeg" alt="Изображение вязанной корзинки для белья." width="334" height="334">
-          <img class="catalog__image-desktop" src="./img/photo-laundry-basket-desktop.jpeg" alt="Изображение вязанной корзинки для белья." width="316" height="462">
+          <p class="catalog__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-laundry-basket-desktop@1x 1x, ./img/photo-laundry-basket-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-laundry-basket-tablet@1x.jpg 1x, ./img/photo-laundry-basket-tablet@2x.jpg 2x">
+              <img class="catalog__image" src="./img/photo-laundry-basket-mobile@1x.jpg" srcset="./img/photo-laundry-basket-mobile@2x.jpg 2x" alt="Изображение вязанной корзинки для белья." width="260" height="195">
+            </picture>
+          </p>
           <div class="catalog__description">
             <h3 class="catalog__title catalog__title-basket">Корзинка для белья</h3>
             <p class="catalog__description-text catalog__description-text-basket">Диаметр 15 см, высота 10 см</p>
@@ -135,13 +147,16 @@
                 <path d="M19.23 7.24h-3.38L12.56.4c-.2-.4-.58-.5-.97-.3-.38.2-.48.6-.29 1l3 6.14H5.5l3-6.13c.2-.4 0-.8-.29-1-.38-.21-.77 0-.96.3L3.96 7.23H.77c-.38 0-.77.3-.77.8 0 .4.29.8.77.8h.2l.87 3.02c-.2.1-.3.3-.3.6 0 .4.3.7.68.7L3.86 19h12.28l1.64-5.83c.38 0 .67-.3.67-.7 0-.2-.1-.5-.29-.6l.87-3.02h.2c.38 0 .77-.3.77-.8 0-.51-.39-.81-.77-.81Zm-4.35 10.15H4.83l-1.16-4.32h12.47l-1.26 4.32Zm1.55-5.83H3.19l-.77-2.81H17.2l-.77 2.81Z"/>
               </svg>
             </div>
-
           </div>
         </li>
         <li class="catalog__item">
-          <img class="catalog__image-mobile" src="./img/photo-toys-basket-mobile.jpeg" alt="Изображение вязанной корзинки для игрушек." width="260" height="195">
-          <img class="catalog__image-tablet" src="./img/photo-toys-basket-tablet.jpeg" alt="Изображение вязанной корзинки для игрушек." width="334" height="334">
-          <img class="catalog__image-desktop" src="./img/photo-toys-basket-desktop.jpeg" alt="Изображение вязанной корзинки для игрушек." width="316" height="462">
+          <p class="catalog__image-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo-toys-basket-desktop@1x.jpg 1x, ./img/photo-toys-basket-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/photo-toys-basket-tablet@1x.jpg 1x, ./img/photo-toys-basket-tablet@2x.jpg 2x">
+              <img class="catalog__image" src="./img/photo-toys-basket-mobile@1x.jpg" srcset="./img/photo-toys-basket-mobile@2x.jpg" alt="Изображение вязанной корзинки для игрушек." width="260" height="195">
+            </picture>
+          </p>
           <div class="catalog__description">
             <h3 class="catalog__title catalog__title-toys">Большая корзинка для игрушек</h3>
             <p class="catalog__description-text catalog__description-text-toys">Диаметр 30 см, высота 30 см</p>
