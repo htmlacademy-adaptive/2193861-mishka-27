@@ -23,7 +23,7 @@
   color: @title-text-color;
   text-align: center;
   margin: 0;
-  padding: 74px 22px;
+  padding: 70px 22px;
   background-color: @form-header-background-color;
 }
 
@@ -31,7 +31,7 @@
   .form-header__title {
     font-size: 43px;
     line-height: 50px;
-    padding: 57px 175px 75px 175px;
+    padding: 33px 175px 75px 175px;
   }
 }
 
@@ -39,6 +39,22 @@
   .form-header__title {
     font-size: 53px;
     line-height: 57px;
-    padding: 57px 320px 96px 322px;
+    padding: 33px 320px 96px 322px;
+  }
+}
+
+.form-header__divider {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    display: block;
+    top: auto;
+    bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: auto;
+    bottom: 373px;
   }
 }

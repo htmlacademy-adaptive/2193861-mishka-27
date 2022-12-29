@@ -9,35 +9,6 @@
   }
 }
 
-.user-list__search-icon {
-  position: absolute;
-  left: 32px;
-  top: 32px;
-  fill: @user-list-icon-fill-color;
-}
-
-@media (min-width: @tablet-width) {
-  .user-list__search-icon {
-    left: 33px;
-    top: 36px;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .user-list__search-icon {
-    height: 18px;
-    width: 18px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .user-list__search-text {
-    display: none;
-  }
-}
-
 .user-list__search-link {
   position: relative;
   display: block;
@@ -56,12 +27,24 @@
   padding-right: 77px;
   border-bottom: 1px solid @item-wrapper-border-color;
 
-  &:hover .user-list__search-icon {
-    fill: @user-list-hover-icon-fill-color;
+  & .user-list__search-icon {
+    color: @user-list-icon-fill-color;
   }
 
-  &:active .user-list__search-icon {
-    opacity: 0.3;
+  &:hover {
+    color: @main-text-color;
+
+    .user-list__search-icon {
+      color: @user-list-hover-icon-fill-color;
+    }
+  }
+
+  &:active {
+    color: @main-text-color;
+
+    .user-list__search-icon {
+      color: @user-list-active-icon-fill-color;
+    }
   }
 }
 
@@ -75,11 +58,10 @@
   }
 }
 
-.user-list__cart-icon {
-  position: absolute;
-  left: 32px;
-  top: 32px;
-  fill: @user-list-icon-fill-color;
+@media (min-width: @tablet-width) {
+  .user-list__search-text {
+    display: none;
+  }
 }
 
 .user-list__cart-link {
@@ -100,11 +82,15 @@
   padding-right: 33px;
   border-bottom: 1px solid @item-wrapper-border-color;
 
+  & .user-list__cart-icon {
+    color: @user-list-icon-fill-color;
+  }
+
   &:hover {
     color: @main-text-hover-color;
 
     .user-list__cart-icon {
-      fill: @user-list-hover-icon-fill-color;
+      color: @user-list-hover-icon-fill-color;
     }
   }
 
@@ -112,7 +98,7 @@
     color: @main-text-active-color;
 
     .user-list__cart-icon {
-      opacity: 0.3;
+      color: @user-list-active-icon-fill-color;
     }
   }
 }
@@ -121,14 +107,17 @@
   .user-list__cart-link {
     font-size: 17px;
     line-height: 24px;
-    padding: 32px 50px 33px 70px;
+    padding-top: 32px;
+    padding-right: 50px;
+    padding-bottom: 32px;
+    padding-left: 83px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .user-list__cart-icon {
-    position: absolute;
-    left: 31px;
-    top: 35px;
+@media (min-width: @desktop-width) {
+  .user-list__cart-link {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 32px 52px 32px 84px;
   }
 }
