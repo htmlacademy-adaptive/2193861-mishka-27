@@ -17,18 +17,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  &:hover {
-    .copyright__icon {
-      fill: @copyright-icon-fill-color;
-    }
-  }
-
-  &:active {
-    .copyright__icon {
-      fill: @copyright-icon-active-fill-color;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -55,9 +43,21 @@
 
 @media (min-width: @tablet-width) {
   .copyright__title {
-    padding-top: 59px;
+    padding-top: 49px;
     padding-right: 26px;
     padding-bottom: 66px;
     padding-left: 0;
+  }
+}
+
+.copyright__link {
+  color: @copyright-icon-fill-color;
+
+  &:hover {
+    color: @copyright-icon-hover-fill-color;
+  }
+
+  &:active {
+    color: @copyright-icon-active-fill-color;
   }
 }
