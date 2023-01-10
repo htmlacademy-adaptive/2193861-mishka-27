@@ -52,10 +52,6 @@
     background-position: center bottom -112px;
   }
 
-  .main-header__title br {
-    display: none;
-  }
-
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-tablet@2x.webp");
     background-size: 768px auto;
@@ -149,10 +145,10 @@
 }
 
 .main-header__button {
-  height: 103px;
+  min-height: 103px;
 
   @media (min-width: @tablet-width) {
-    height: 119px;
+    min-height: 119px;
 
     &:hover {
       height: 124px;

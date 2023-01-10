@@ -6,6 +6,8 @@
   .user-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 89px
   }
 }
 
@@ -55,7 +57,7 @@
     border: none;
     border-left: 1px solid @item-wrapper-border-color;
     border-right: 1px solid @item-wrapper-border-color;
-    border-bottom: 1px solid @item-wrapper-border-color;
+    border-bottom: 0;
   }
 }
 
@@ -113,6 +115,7 @@
     padding-right: 50px;
     padding-bottom: 32px;
     padding-left: 83px;
+    border-bottom: 0;
   }
 }
 
