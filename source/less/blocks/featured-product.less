@@ -39,6 +39,7 @@
   .featured-product__card {
     display: grid;
     grid-template-columns: 45% 55%;
+    grid-auto-rows: min-content;
     grid-template-areas:
       "text image"
       "description image"
@@ -173,9 +174,6 @@
 
 @media (min-width: @tablet-width) {
   .featured-product__description-text {
-    position: absolute;
-    top: 975px;
-    right: 380px;
     font-size: 17px;
     line-height: 30px;
     grid-area: text;
@@ -188,14 +186,11 @@
 
 @media (min-width: @desktop-width) {
   .featured-product__description-text {
-    position: absolute;
-    top: 1060px;
-    right: 575px;
     font-weight: 400;
     font-size: 17px;
     line-height: 30px;
     height: 90px;
-    padding-top: 0;
+    padding-top: 170px;
     padding-right: 50px;
     padding-left: 225px;
     padding-bottom: 50px;
@@ -216,8 +211,6 @@
 @media (min-width: @tablet-width) {
   .featured-product__description-list {
     grid-area: description;
-    position: absolute;
-    top: 1100px;
     padding-top: 0;
     padding-bottom: 50px;
     padding-left: 50px;
@@ -228,7 +221,7 @@
 @media (min-width: @desktop-width) {
   .featured-product__description-list {
     position: static;
-    height: 114px;
+    min-height: 114px;
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 109px;

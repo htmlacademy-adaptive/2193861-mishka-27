@@ -49,7 +49,7 @@
   padding-top: 0;
   padding-left: 0;
   padding-bottom: 9px;
-  padding-right: 30px;
+  padding-right: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -92,10 +92,11 @@
   content: "";
   position: absolute;
   height: 1px;
-  width: 200px;
+  width: auto;
   background-color: @form-legend-decoration-color;
   top: 8px;
   left: 60px;
+  right: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -334,10 +335,18 @@
 
   .form-container__name-item-label-surname {
     padding-top: 14px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 18px;
+    }
   }
 
   .form-container__name-item-label-patronomyc {
     padding-top: 12px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 18px;
+    }
   }
 }
 
@@ -490,11 +499,11 @@
 }
 
 .form-container__color-item-pink {
-  margin-bottom: 0;
+  margin-bottom: 18px;
 }
 
 .form-container__color-item-orange {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .form-container__color-item-control {
@@ -573,14 +582,16 @@
 .form-container__phone-icon {
   position: absolute;
   top: 30px;
-  left: 258px;
+  left: auto;
+  right: 30px;
   color: @icon-fill-color;
 }
 
 @media (min-width: @tablet-width) {
   .form-container__phone-icon {
     top: 60px;
-    left: 690px;
+    left: auto;
+    right: 76px;
   }
 }
 
@@ -588,14 +599,15 @@
   .form-container__phone-icon {
     top: 60px;
     left: auto;
-    right: 75px;
+    right: 233px;
   }
 }
 
 .form-container__email-icon {
   position: absolute;
   top: 34px;
-  left: 256px;
+  left: auto;
+  right: 30px;
   color: @icon-fill-color;
 }
 
@@ -603,14 +615,16 @@
   .form-container__email-icon {
     top: 25px;
     left: auto;
-    right: 75px;
+    right: 72px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form-container__email-icon {
-    top: 25px;
-    left: 1200px;
+    top: 36px;
+    bottom: 14px;
+    left: auto;
+    right: 229px;
   }
 }
 
@@ -731,7 +745,7 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .form-container__input-contact-phone {
     background-color: @form-field-contact-background;
     width: auto;
@@ -752,7 +766,7 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .form-container__contact-email {
     padding-top: 0;
     padding-right: 225px;
@@ -768,9 +782,24 @@
   padding-left: 0;
 }
 
+.form-container__legend-contact-email::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: auto;
+  background-color: @form-legend-decoration-color;
+  top: 8px;
+  left: 78px;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .form-container__legend-contact-email {
-    padding-top: 20px;
+    padding-top: 38px;
     padding-right: 0;
     padding-bottom: 19px;
     padding-left: 50px;
@@ -904,7 +933,7 @@
   .form-container__input-comment {
     font-size: 19px;
     line-height: 18px;
-    margin-left: 0;
+    margin-left: -25px;
     width: auto;
   }
 }
@@ -928,7 +957,7 @@
 @media (min-width: @desktop-width) {
   .form-container__submit-wrapper {
     padding-right: 225px;
-    padding-left: 225px;
+    padding-left: 205px;
   }
 }
 

@@ -13,7 +13,7 @@
 </head>
 <body class="page__catalog">
   <header class="catalog-header header">
-    <nav class="header-nav">
+    <nav class="header-nav site-list">
       <div class="header-nav__top-menu">
         <a class="header-nav__logo" href="index.html">
           <svg class="header__logo-icon-mobile" width="86" height="35">
@@ -39,7 +39,6 @@
           <span class="visually-hidden">Закрыть меню</span>
         </button>
       </div>
-      <div class="site-list">
         <div class="header-nav__list-main header-nav__list-main-additional-pages header-nav__list-main--closed header-nav__list-main--nojs site-list__main-wrapper">
           <ul class="header-nav__list site-list__main">
             <li class="site-list__item site-list__item-catalog">
@@ -60,7 +59,6 @@
               </li>
             </ul>
           </div>
-        </div>
         <small class="header-nav__delivery header-nav__delivery-additional-page">Бесплатная доставка по России</small>
         <div class="header-nav__user-menu header-nav__user-menu--closed header-nav__user-menu--nojs">
           <ul class="header-nav__list user-list">
@@ -84,8 +82,8 @@
         </div>
         <div class="header-nav__decoration header-nav__decoration-additional-pages"></div>
     </nav>
-    <h1 class="header__title catalog__header-title">Каталог товаров</h1>
-    <svg class="catalog__header-divider" viewBox="0 0 1150 34">
+    <h1 class="header__title catalog-header__title">Каталог товаров</h1>
+    <svg class="catalog-header__divider" viewBox="0 0 1150 34">
       <use xlink:href="./img/sprite.svg#header-divider"></use>
     </svg>
   </header>
@@ -156,10 +154,13 @@
     <section class="production-process">
       <div class="production-process__container">
         <div class="production-process__title-wrapper">
-          <img class="production-process__icon" src="./img/video-icon.svg" alt="Иконка видеокамеры." width="32" height="22">
+          <img class="production-process__icon" src="/img/icons/video-icon.svg" alt="Иконка видеокамеры." width="32" height="22">
           <h2 class="production-process__title">Процесс производства</h2>
         </div>
-          <video class="production-process__video" src="/" poster="./img/video-preview.jpeg"></video>
+        <div class="production-process__video-wrapper">
+          <video class="production-process__video" src="/" poster="./img/video-preview.webp"></video>
+          <div class="production-process__play"></div>
+        </div>
           <p class="production-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a href="form.html" class="button--production-process button production-process__button">Сделать заказ</a>
         </div>
@@ -206,7 +207,7 @@
       </section>
       <section class="copyright">
         <h2 class="copyright__title">Разработано</h2>
-        <a class="copyright__link" href="https://htmlacademy.ru">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">HTML Академия</span>
           <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="35">
             <use xlink:href="./img/sprite.svg#copyright-icon"></use>
@@ -215,6 +216,19 @@
       </section>
     </div>
   </footer>
+  <section class="modal">
+    <h2 class="visually-hidden">Выберите размер</h2>
+    <div class="modal__container modal__container--closed">
+      <h3 class="modal__title">Добавить в корзину</h3>
+      <p class="modal__text">Выберите размер:</p>
+      <div class="modal__size">
+        <span class="modal__size-item modal__size-item--active">S</span>
+        <span class="modal__size-item">M</span>
+        <span class="modal__size-item">L</span>
+      </div>
+      <button class="modal__button button">Добавить</button>
+    </div>
+  </section>
   <script src="./js/script.js"></script>
 </body>
 </html>
