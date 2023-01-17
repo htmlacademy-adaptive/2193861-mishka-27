@@ -1,11 +1,17 @@
-.modal__container {
-  display: flex;
+.modal {
+  display: none; // для открытия модального окна нужно заменить none на flex
   flex-direction: column;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modal__container {
+  position: relative;
+  margin: auto;
   width: 320px;
   height: 336px;
   background-color: @modal-bg-color;
@@ -14,18 +20,11 @@
 
   @media (min-width: @tablet-width) {
     width: 566px;
-    right: 101px;
-    left: 101px;
-  }
-
-  @media (min-width: @desktop-width) {
-    right: 292px;
-    left: 292px;
   }
 }
 
 .modal__container--closed {
-  display: none;
+  display: none;  // для открытия модального окна нужно заменить none на block
 }
 
 .modal__title {
@@ -37,12 +36,16 @@
   text-align: center;
   text-transform: uppercase;
   color: @title-text-color;
-  padding: 29px 70px 14px 74px;
+  width: 160px;
+  height: 61px;
+  padding: 29px 80px 14px 80px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 57px;
+    width: 381px;
+    height: 57px;
     padding: 37px 92px 11px 93px;
   }
 }
@@ -90,10 +93,12 @@
   width: 38px;
   min-height: 16px;
   padding: 18px 22px;
+  padding-bottom: 14px;
   margin-right: 7px;
 
   @media (min-width: @tablet-width) {
     padding: 18px 37px;
+    padding-bottom: 14px;
   }
 }
 
@@ -106,6 +111,7 @@
 }
 
 .modal__button {
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -116,12 +122,13 @@
   color: @modal-button-text-color;
   background-color: @modal-button-color;
   border: none;
-  padding: 18px 68px;
-  margin: 0 30px;
+  padding: 18px 82px;
+  align-self: center;
+  margin: 0 auto;
   margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
-    padding: 18px 112px;
+    padding: 18px 126px;
     margin: 0 108px;
     margin-bottom: 46px;
   }

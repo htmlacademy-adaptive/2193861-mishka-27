@@ -1,24 +1,32 @@
 .footer {
+  background-color: @footer-background-color;
+}
+
+.footer__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: @footer-background-color;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
-  .footer {
+  .footer__wrapper {
     display: grid;
     grid-template-columns: auto auto auto;
     padding-left: 50px;
     padding-right: 50px;
+    max-width: 668px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .footer {
+  .footer__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 1050px;
   }
 }
