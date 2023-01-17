@@ -4,10 +4,7 @@
 
 @media (min-width: @tablet-width) {
   .site-list__main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 50px;
+    margin: 0;
   }
 }
 
@@ -31,14 +28,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .site-list__main-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
   }
 }
 
@@ -96,7 +85,7 @@
   padding-top: 28px;
   padding-bottom: 27px;
   padding-left: 26px;
-  padding-right: 10px;
+  padding-right: 40px;
   border-bottom: 1px solid @item-wrapper-border-color;
 
   &:hover {
@@ -106,6 +95,11 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.site-list__link-catalog {
+  padding-left: 30px;
+  padding-right: 50px;
 }
 
 @media (min-width: @tablet-width) {
@@ -133,22 +127,48 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .site-list__link-catalog {
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    padding-right: 0;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .site-list__link-catalog {
     padding-top: 32px;
-    padding-right: 36px;
-    padding-bottom: 32px;
+    padding-right: 35px;
+    padding-bottom: 33px;
     padding-left: 50px;
+    border-bottom: 1px solid @item-wrapper-border-color;
+  }
+}
+
+.site-list__link-order {
+  padding-left: 30px;
+  padding-right: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__link-order {
+    padding-top: 20px;
+    padding-right: 13px;
+    padding-left: 37px;
+    padding-bottom: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list__link-order {
     padding-top: 32px;
-    padding-right: 0;
-    padding-bottom: 32px;
-    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 33px;
+    padding-left: 37px;
+    background-color: @header-background-color;
     border-right: none;
+    border-bottom: 1px solid @item-wrapper-border-color;
   }
 }
 
@@ -157,9 +177,9 @@
     font-size: 15px;
     line-height: 24px;
     padding-top: 15px;
-    padding-right: 25px;
+    padding-right: 37px;
     padding-bottom: 20px;
-    padding-left: 51px;
+    padding-left: 30px;
     border: none;
   }
 }
@@ -168,10 +188,10 @@
   .site-list__link-sale {
     font-size: 15px;
     line-height: 24px;
-    padding-top: 14px;
-    padding-right: 25px;
+    padding-top: 15px;
+    padding-right: 70px;
     padding-bottom: 20px;
-    padding-left: 35px;
+    padding-left: 26px;
     border: none;
   }
 }

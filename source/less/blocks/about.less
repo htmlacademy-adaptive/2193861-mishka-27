@@ -1,13 +1,17 @@
 .about {
-  margin-bottom: 58px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding-bottom: 58px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 24px;
+    max-width: 768px;
+    padding-top: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 68px;
-    margin-bottom: 38px;
+    max-width: 1150px;
+    padding-top: 68px;
+    padding-bottom: 90px;
   }
 }
 
@@ -20,14 +24,15 @@
   line-height: 30px;
   color: @title-text-color;
   margin: 0;
-  padding: 19px 30px 28px 30px;
+  padding: 22px 30px 28px 30px;
 }
 
 @media (min-width: @tablet-width) {
   .about__title {
     font-size: 43px;
     line-height: 50px;
-    padding-left: 52px;
+    padding-top: 30px;
+    padding-left: 50px;
     padding-bottom: 0;
   }
 }
@@ -47,6 +52,7 @@
   display: flex;
   flex-direction: column;
   .reset-list;
+  min-height: 400px;
 }
 
 @media (min-width: @tablet-width) {
@@ -70,9 +76,8 @@
   font-display: swap;
   display: block;
   margin: 0;
-  min-height: 40px;
+  max-height: 40px;
   padding-left: 30px;
-  padding-right: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -270,7 +275,7 @@
 
 @media (min-width: @desktop-width) {
   .about__text-price {
-    padding-top: 20px;
+    padding-top: 25px;
     padding-left: 225px;
     padding-bottom: 63px;
     padding-right: 90px;
@@ -285,7 +290,7 @@
 
 @media (min-width: @tablet-width) {
   .about__text-likes {
-    padding-top: 21px;
+    padding-top: 24px;
     padding-left: 50px;
     padding-right: 100px;
   }
@@ -293,7 +298,7 @@
 
 @media (min-width: @desktop-width) {
   .about__text-likes {
-    padding-top: 21px;
+    padding-top: 25px;
     padding-right: 130px;
     padding-bottom: 0;
     padding-left: 225px;
@@ -307,9 +312,10 @@
 
 @media (min-width: @tablet-width) {
   .about__text-handmade {
+    padding-top: 20px;
     padding-left: 0;
     padding-right: 74px;
-    padding-bottom: 59px;
+    padding-bottom: 62px;
   }
 }
 
@@ -317,7 +323,7 @@
   .about__text-handmade {
     padding-top: 18px;
     padding-right: 297px;
-    padding-bottom: 60px;
+    padding-bottom: 65px;
   }
 }
 
@@ -358,7 +364,7 @@
 
 @media (min-width: @desktop-width) {
   .about__text-gift {
-    padding-top: 19px;
+    padding-top: 20px;
     padding-right: 292px;
     padding-bottom: 0;
     padding-left: 0;

@@ -1,18 +1,29 @@
 .reviews {
-  padding-left: 30px;
-  padding-right: 30px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
+    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    max-width: 1150px;
+    margin: 0 auto;
   }
 }
 
 .reviews__wrapper {
   display: flex;
   flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-bottom: 34px;
 }
 
@@ -27,7 +38,9 @@
     background-image: url("../img/reviews-background-tablet@1x.webp");
     background-repeat: no-repeat;
     background-size: 350px 457px;
-    margin-bottom: 57px;
+    min-height: 457px;
+    padding: 0;
+    margin-bottom: 62px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reviews-background-tablet@2x.webp");
@@ -50,7 +63,7 @@
     background-size: 350px auto;
     padding-right: 50px;
     padding-left: 50px;
-    margin-bottom: 67px;
+    margin-bottom: 62px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reviews-background-desktop@2x.webp");
@@ -82,9 +95,9 @@
     color: @title-text-color;
     font-display: swap;
     margin: 0;
-    padding-top: 72px;
+    padding-top: 79px;
     padding-right: 284px;
-    padding-bottom: 19px;
+    padding-bottom: 39px;
     padding-left: 50px;
   }
 }
@@ -94,7 +107,7 @@
     grid-area: title;
     font-size: 53px;
     line-height: 57px;
-    padding-top: 128px;
+    padding-top: 80px;
     padding-left: 174px;
     padding-bottom: 0;
     padding-right: 0;
@@ -112,12 +125,21 @@
   margin: 0;
 }
 
+.reviews__text span {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+
 @media (min-width: @tablet-width) {
   .reviews__text {
     font-size: 17px;
     line-height: 30px;
     grid-area: text;
-    padding: 0 50px 61px 50px;
+    padding: 0 50px 57px 50px;
   }
 }
 
@@ -130,7 +152,7 @@
     padding-top: 35px;
     padding-left: 175px;
     padding-bottom: 0;
-    padding-right: 30px;
+    padding-right: 62px;
   }
 }
 
@@ -149,12 +171,20 @@
 @media (min-width: @tablet-width) {
   .reviews__author-name {
     padding-top: 0;
+    font-size: 18px;
     line-height: 30px;
     margin: 0;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .reviews__author-name {
+    font-size: 17px;
+  }
+}
+
 .reviews__author-nickname {
+  display: block;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -162,11 +192,13 @@
   line-height: 30px;
   color: @small-text-color;
   font-display: swap;
+  padding-top: 3px;
   margin: 0;
 }
 
 @media (min-width: @tablet-width) {
   .reviews__author-nickname {
+    padding: 0;
     margin: 0;
   }
 }
@@ -174,17 +206,17 @@
 @media (min-width: @tablet-width) {
   .reviews__author-info {
     grid-area: author;
-    padding: 0 228px 0 50px;
+    padding: 0 210px 0 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews__author-info {
     grid-area: author;
-    padding-top: 44px;
+    padding-top: 40px;
     padding-right: 0;
     padding-left: 174px;
-    padding-bottom: 96px;
+    padding-bottom: 100px;
   }
 }
 
@@ -194,41 +226,41 @@
 
 .reviews__toggle {
   padding-top: 30px;
-  padding-bottom: 38px;
+  padding-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
   .reviews__toggle {
     padding-top: 0;
-    padding-right: 50px;
-    padding-bottom: 35px;
-    padding-left: 19px;
+    padding-right: 52px;
+    padding-bottom: 55px;
+    padding-left: 26px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews__toggle {
-    padding-top: 40px;
+    padding-top: 42px;
     padding-right: 0;
-    padding-bottom: 111px;
-    padding-left: 455px;
+    padding-bottom: 109px;
+    padding-left: 457px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .reviews__button {
-    margin-top: 69px;
-    margin-right: 50px;
-    margin-bottom: 35px;
-    margin-left: 22px;
+    margin-top: 75px;
+    margin-right: 52px;
+    margin-bottom: 40px;
+    margin-left: 26px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews__button {
-    margin-top: 119px;
+    margin-top: 80px;
     margin-right: 0;
-    margin-bottom: 10px;
-    margin-left: 453px;
+    margin-bottom: 0;
+    margin-left: 458px;
   }
 }

@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 30px;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 56px;
   border: 1px solid @item-wrapper-border-color;
   padding: 0 0 33px 0;
@@ -20,7 +21,8 @@
 
 @media (min-width: @tablet-width) {
   .production-process__container {
-    margin: 0 50px;
+    width: 668px;
+    margin: 0 auto;
     margin-top: 0;
     margin-bottom: 64px;
     padding-bottom: 0;
@@ -31,11 +33,14 @@
 @media (min-width: @desktop-width) {
   .production-process__container {
     display: grid;
-    grid-template-columns: 683px auto;
+    grid-template-columns: 65% 35%;
     grid-template-areas:  "video  title"
       "video  text"
       "video  button";
-    margin-bottom: 102px;
+    width: 1050px;
+    min-height: 455px;
+    margin: 0 auto;
+    margin-bottom: 101px;
   }
 }
 
@@ -65,13 +70,13 @@
 
 @media (min-width: @tablet-width) {
   .production-process__icon {
-    padding: 29px 33px 29px 42px;
+    padding: 32px 33px 29px 42px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .production-process__icon {
-    padding: 44px 296px 25px 89px;
+    padding: 44px 296px 28px 80px;
   }
 }
 
@@ -90,7 +95,7 @@
   .production-process__title {
     font-size: 20px;
     line-height: 24px;
-    padding: 34px 290px 25px 0;
+    padding: 40px 290px 25px 0;
   }
 }
 
@@ -98,7 +103,7 @@
   .production-process__title {
     font-size: 20px;
     line-height: 24px;
-    padding: 0 150px 0 89px;
+    padding: 0 150px 0 80px;
   }
 }
 
@@ -126,7 +131,7 @@
 @media (min-width: @desktop-width) {
   .production-process__text {
     grid-area: text;
-    padding: 27px 36px 52px 89px;
+    padding: 27px 36px 48px 80px;
   }
 }
 
@@ -152,26 +157,52 @@
   }
 }
 
+.production-process__video {
+  display: block;
+  width: 260px;
+  height: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 683px;
+    height: 455px;
+  }
+}
+
 .production-process__play {
   position: absolute;
   background-image: url("/img/icons/play.svg");
   width: 100px;
   height: 77px;
+  background-color: transparent;
+  border: none;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 37px;
+  bottom: auto;
   margin: auto;
   background-size: contain;
   background-position: center;
 
   &:hover {
     transform: scale(1.2);
+    opacity: 0.3;
   }
 
   &:active {
     transform: scale(0.8);
     opacity: 0.3;
+  }
+  @media (min-width: @tablet-width) {
+    top: 189px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 190px;
   }
 }
 
@@ -193,6 +224,6 @@
     grid-area: button;
     width: 170px;
     padding: 18px 26px 18px 26px;
-    margin: 0 42px 60px 95px;
+    margin: 0 50px 60px 80px;
   }
 }
