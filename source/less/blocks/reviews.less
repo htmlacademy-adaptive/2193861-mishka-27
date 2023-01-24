@@ -34,13 +34,16 @@
       "title button"
       "text text"
       "author slider";
-    grid-template-columns: auto 1fr;
-    background-image: url("../img/reviews-background-tablet@1x.webp");
-    background-repeat: no-repeat;
-    background-size: 350px 457px;
+    grid-template-columns: auto auto;
     min-height: 457px;
+    width: 768px;
+    background-image: url("../img/reviews-background-tablet@1x.webp");
+    background-size: 350px 457px;
+    background-repeat: no-repeat;
     padding: 0;
+    margin: 0 auto;
     margin-bottom: 62px;
+
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reviews-background-tablet@2x.webp");
@@ -61,6 +64,7 @@
     background-repeat: no-repeat;
     background-position: center left 50px;
     background-size: 350px auto;
+    width: 1050px;
     padding-right: 50px;
     padding-left: 50px;
     margin-bottom: 62px;
@@ -96,8 +100,8 @@
     font-display: swap;
     margin: 0;
     padding-top: 79px;
-    padding-right: 284px;
-    padding-bottom: 39px;
+    padding-right: 260px;
+    padding-bottom: 34px;
     padding-left: 50px;
   }
 }
@@ -125,21 +129,12 @@
   margin: 0;
 }
 
-.reviews__text span {
-  display: block;
-
-  @media (min-width: @tablet-width) {
-    display: inline;
-  }
-}
-
-
 @media (min-width: @tablet-width) {
   .reviews__text {
     font-size: 17px;
     line-height: 30px;
     grid-area: text;
-    padding: 0 50px 57px 50px;
+    padding: 0 50px 50px 50px;
   }
 }
 
@@ -149,10 +144,12 @@
     font-size: 17px;
     line-height: 30px;
     text-align: left;
+    width: 875px;
+    min-height: 90px;
     padding-top: 35px;
     padding-left: 175px;
     padding-bottom: 0;
-    padding-right: 62px;
+    padding-right: 0;
   }
 }
 
@@ -225,16 +222,17 @@
 }
 
 .reviews__toggle {
-  padding-top: 30px;
+  padding-top: 31px;
   padding-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
   .reviews__toggle {
+
     padding-top: 0;
-    padding-right: 52px;
+    padding-right: 0;
     padding-bottom: 55px;
-    padding-left: 26px;
+    padding-left: 0;
   }
 }
 
@@ -243,16 +241,13 @@
     padding-top: 42px;
     padding-right: 0;
     padding-bottom: 109px;
-    padding-left: 457px;
+    padding-left: 350px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .reviews__button {
     margin-top: 75px;
-    margin-right: 52px;
-    margin-bottom: 40px;
-    margin-left: 26px;
   }
 }
 
@@ -261,6 +256,6 @@
     margin-top: 80px;
     margin-right: 0;
     margin-bottom: 0;
-    margin-left: 458px;
+    margin-left: 350px;
   }
 }

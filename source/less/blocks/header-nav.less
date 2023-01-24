@@ -10,7 +10,7 @@
     grid-template-areas:
       "logo user-menu"
       "site-menu-main delivery";
-    grid-template-columns: 48% auto;
+    grid-template-columns: 48.5% auto;
   }
 }
 
@@ -29,7 +29,7 @@
   grid-area: logo;
   display: block;
   color: @header-logo-color;
-  padding: 22px 64px 22px 119px;
+  padding: 22px 61px 22px 116px;
   max-width: 86px;
   min-height: 35px;
   margin: 0;
@@ -50,7 +50,7 @@
     max-width: 113px;
     padding-top: 21px;
     padding-bottom: 22px;
-    padding-left: 46px;
+    padding-left: 48px;
     padding-right: 209px;
     justify-self: end;
   }
@@ -104,12 +104,13 @@
     background-color: @header-nav-toggle-button-background-color;
     background-image: url("../img/icons/menu-open.svg");
     background-repeat: no-repeat;
-    background-position: center right 34px;
+    background-position: center right 30px;
     min-width: 20px;
     min-height: 14px;
     padding-top: 32px;
-    padding-right: 51px;
+    padding-right: 57px;
     padding-bottom: 33px;
+    padding-left: 0;
   }
 
   .header-nav__toggle--close {
@@ -120,7 +121,7 @@
     background-color: @header-nav-toggle-button-background-color;
     background-image: url("../img/icons/menu-close.svg");
     background-repeat: no-repeat;
-    background-position: center right 33px;
+    background-position: center right 30px;
     min-width: 21px;
     min-height: 20px;
     padding-top: 29px;
@@ -199,6 +200,7 @@
 @media (min-width: @desktop-width) {
   .header-nav__list-site {
     background-color: @header-background-color;
+    border-bottom: 1px solid @item-wrapper-border-color;
   }
 }
 
@@ -268,7 +270,7 @@
     color: @small-text-color;
     font-display: swap;
     padding-top: 20px;
-    padding-left: 116px;
+    padding-left: 118px;
     justify-self: stretch;
   }
 

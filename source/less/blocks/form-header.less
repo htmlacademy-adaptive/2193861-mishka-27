@@ -5,7 +5,7 @@
 
 @media (min-width: @tablet-width) {
   .form-header {
-    margin-bottom: 54px;
+    margin-bottom: 64px;
   }
 }
 
@@ -32,9 +32,24 @@
 
 @media (min-width: @tablet-width) {
   .form-header__title {
+    position: relative;
     font-size: 43px;
     line-height: 50px;
     padding: 33px 175px 75px 175px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/icons/zigzag-fill-tablet.svg");
+      background-size: 768px 24px;
+      width: 768px;
+      height: 24px;
+      top: 144px;
+      bottom: 0;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -43,21 +58,19 @@
     font-size: 53px;
     line-height: 57px;
     padding: 30px 320px 96px 322px;
-  }
-}
 
-.form-header__divider {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    display: block;
-    top: 300px;
-    bottom: auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 320px;
-    bottom: auto;
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/icons/zigzag-fill-desktop-form.svg");
+      background-size: 1150px 34px;
+      width: 1150px;
+      height: 34px;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 166px;
+      bottom: 0;
+    }
   }
 }
