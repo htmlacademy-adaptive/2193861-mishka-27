@@ -15,7 +15,8 @@
 @media (min-width: @tablet-width) {
   .footer__wrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 102px 142px 182px;
+    column-gap: 122px;
     padding-left: 50px;
     padding-right: 50px;
     max-width: 668px;
@@ -24,9 +25,7 @@
 
 @media (min-width: @desktop-width) {
   .footer__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    column-gap: 312px;
     max-width: 1050px;
   }
 }

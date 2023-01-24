@@ -21,7 +21,7 @@
   <header class="form-header header">
     <nav class="header-nav site-list">
       <div class="header-nav__mobile-top-menu">
-        <a class="header-nav__logo" href="index.html">
+        <a class="header-nav__logo header-nav__logo--nojs" href="index.html">
           <svg class="header__logo-icon-mobile" width="86" height="35">
             <use xlink:href="./img/sprite.svg#header-logo-mobile"></use>
           </svg>
@@ -32,11 +32,11 @@
             <use xlink:href="./img/sprite.svg#header-logo-desktop"></use>
           </svg>
         </a>
-        <button class="header-nav__toggle header-nav__toggle--open">
+        <button class="header-nav__toggle header-nav__toggle--open header-nav__toggle--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
-      <ul class="header-nav__list-site header-nav__list-site-form header-nav__list-site--closed header-nav__list-site--nojs site-list__main">
+      <ul class="header-nav__list-site header-nav__list-site--closed header-nav__list-site--nojs header-nav__list-site-form site-list__main">
         <li class="site-list__item site-list__item-catalog">
           <a class="site-list__link site-list__link-catalog" href="catalog.html">Каталог товаров</a>
         </li>
@@ -73,13 +73,7 @@
       </ul>
       <div class="header-nav__decoration header-nav__decoration-form"></div>
       </nav>
-    <div>
       <h1 class="header__title form-header__title">Вязание на заказ</h1>
-      <svg class="form-header__divider" viewBox="0 0 1150 34">
-        <use xlink:href="./img/sprite.svg#header-divider"></use>
-      </svg>
-    </div>
-
   </header>
   <main class="form-main-container">
     <form class="form-container" action="https://echo.htmlacademy.ru/" method="get">
@@ -165,13 +159,13 @@
               </label>
             </li>
             <li class="form-container__name-item">
-              <label class="form-container__name-item-control" for="surname">
+              <label class="form-container__name-item-control form-container__name-item-control-surname" for="surname">
                 <span class="form-container__name-item-label form-container__name-item-label-surname">Фамилия:</span>
                 <input class="form-container__input form-container__input-surname" type="text" id="surname" placeholder="Укажите фамилию*" required>
               </label>
             </li>
             <li class="form-container__name-item form-container__name-item-patronomyc">
-              <label class="form-container__name-item-control" for="patronomyc">
+              <label class="form-container__name-item-control form-container__name-item-control-patronomyc" for="patronomyc">
                 <span class="form-container__name-item-label form-container__name-item-label-patronomyc">Отчество:</span>
                 <input class="form-container__input form-container__input-patronomyc" type="text" id="patronomyc" placeholder="Отчество, если желаете" required>
               </label>

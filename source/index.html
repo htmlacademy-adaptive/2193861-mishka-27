@@ -11,13 +11,14 @@
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="js/map-control.js" as="script">
     <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
-    <header class="main-header header">
+    <header class="header">
           <nav class="header-nav site-list">
               <div class="header-nav__mobile-top-menu">
                 <a class="header-nav__logo header-nav__logo--nojs" href="index.html">
@@ -94,9 +95,6 @@
                   </a>
                 </li>
               </ul>
-              <svg class="main-header__divider" viewBox="0 0 1150 34">
-                <use xlink:href="./img/sprite.svg#header-divider"></use>
-              </svg>
             </div>
           </div>
         </section>
@@ -143,15 +141,15 @@
         <ul class="about__list">
           <li class="about__item about__item-eco">
             <img class="about__icon about__icon-eco" src="./img/icons/icon-eco-materials.svg" alt="Эко материал." width="33" height="38">
-            <p class="about__text about__text-eco">Экологически чистые материалы</p>
+            <p class="about__text about__text-eco">Экологически <br> чистые материалы</p>
           </li>
           <li class="about__item about__item-price">
             <img class="about__icon about__icon-price" src="./img/icons/icon-price.svg" alt="Отличная цена." width="47" height="27">
-            <p class="about__text about__text-price">Скандинавский стиль по российской цене</p>
+            <p class="about__text about__text-price">Скандинавский стиль <br> по российской цене</p>
           </li>
           <li class="about__item about__item-likes">
             <img class="about__icon about__icon-likes" src="./img/icons/icon-likes.svg" alt="Лайки." width="34" height="27">
-            <p class="about__text about__text-likes">Увеличивает лайки на фотографиях</p>
+            <p class="about__text about__text-likes">Увеличивает лайки<br> на фотографиях</p>
           </li>
           <li class="about__item about__item-handmade">
             <img class="about__icon about__icon-handmade" src="./img/icons/icon-handmade.svg" alt="Сделано вручную." width="35" height="34">
@@ -171,9 +169,10 @@
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-            <span> у популярных инстамамочек.</span>
-            В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-            <span> и мои фотографии сразу стали</span> более стильными, а также набирают больше лайков!</p>
+            у&nbsp;популярных
+            инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали
+            более
+            стильными, а также набирают больше лайков!</p>
           <div class="reviews__author-info">
             <p class="reviews__author-name">Анастасия Красильникова</p>
             <p class="reviews__author-nickname">@misssssiskras</p>
@@ -292,5 +291,6 @@
       </div>
     </section>
     <script src="./js/script.js"></script>
+    <script src="./js/map-control.js"></script>
   </body>
 </html>
